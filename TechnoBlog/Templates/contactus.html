@@ -1,0 +1,36 @@
+    {% extends 'main.html'%}
+
+    {% block content%}
+    <form method = "POST">
+    {% csrf_token %}
+        <div class="form-row">
+          <div class="col-md-4 mb-3"  class="form-control">
+          <label>First Name </label>
+           {{form.fname}}   
+          </div>
+        <div class="form-row">
+        
+          <div class="col-md-4 mb-3"  class="form-control">
+          <label>Last name </label>
+           {{form.lname}}   
+          </div>
+        <div class="form-row">
+          <div class="col-md-4 mb-3"  class="form-control">
+          <label>Email </label>
+           {{form.email}}   
+          </div>
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3"  class="form-control">
+          <label>contact Number </label>
+           {{form.phone}}   
+          </div>
+
+        {{form.comment}}
+        
+
+         
+        <input type = "submit" value = "add">
+      </form>
+
+      {% endblock content%}
